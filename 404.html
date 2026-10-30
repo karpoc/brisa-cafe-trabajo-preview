@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex" />
+    <title>Brisa · Café y trabajo</title>
+  </head>
+  <body>
+    <p>Redirigiendo a Brisa…</p>
+    <script>
+      ;(function () {
+        var segments = window.location.pathname.split('/').filter(Boolean)
+        var base = segments.length ? '/' + segments[0] + '/' : '/'
+        var rest = segments.slice(1).join('/')
+        window.location.replace(
+          base + '?r=' + encodeURIComponent(rest + window.location.search),
+        )
+      })()
+    </script>
+  </body>
+</html>
